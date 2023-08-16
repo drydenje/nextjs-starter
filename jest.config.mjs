@@ -1,8 +1,8 @@
-import nextJest from 'next/jest';
+import nextJest from "next/jest";
 
 const createJestConfig = nextJest({
   // the path to next.config.js and .env files in your test environment
-  dir: './';
+  dir: "./",
 });
 
 // add any custom config to be passed to Jest
@@ -10,7 +10,7 @@ const createJestConfig = nextJest({
 const config = {
   // Add more setup options before each test is run
   // setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
-  testEnvironment: 'jest-environment-jsdom',
-}
+  testEnvironment: "jest-environment-jsdom",
+};
 
 export default createJestConfig(config);
