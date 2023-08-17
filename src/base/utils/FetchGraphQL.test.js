@@ -11,5 +11,6 @@ test("fetches data from a GraphQL server", () => {
     }
   }`;
 
-  expect(1 === 1);
+  const test = 1;
+  expect(test).toEqual(1);
 });

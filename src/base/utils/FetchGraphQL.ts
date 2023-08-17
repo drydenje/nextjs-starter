@@ -23,7 +23,7 @@ Usage:
 */
 
 const FetchGraphQL = async (
-  query,
+  query: String,
   host = process.env.ENDPOINT,
   token = process.env.ACCESS_TOKEN
 ) => {
