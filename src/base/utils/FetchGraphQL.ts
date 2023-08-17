@@ -23,23 +23,23 @@ Usage:
 */
 
 const FetchGraphQL = async (
-  query: String,
+  query: string,
   host = process.env.ENDPOINT,
   token = process.env.ACCESS_TOKEN
 ) => {
   const opts = {
-    method: "POST",
+    method: 'POST',
     headers: {
-      Authorization: "Bearer " + token,
-      "Content-Type": "application/json",
+      Authorization: 'Bearer ' + token,
+      'Content-Type': 'application/json',
     },
     body: JSON.stringify({ query }),
-  };
+  }
 
   const results = await fetch(host, opts)
     .then((res) => res.json())
-    .catch(console.error);
-  return results.data;
-};
+    .catch(console.error)
+  return results.data
+}
 
-export default FetchGraphQL;
+export default FetchGraphQL
