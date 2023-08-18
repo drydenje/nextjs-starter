@@ -6,6 +6,7 @@ module.exports = {
   // Lint then format TypeScript and JavaScript files
   '**/*.(ts|tsx|js)': (filenames) => [
     `npx eslint --fix ${filenames.join(' ')}`,
+    // `npm rum lint --fix ${filenames.join(' ')}`,
     `npx prettier --write ${filenames.join(' ')}`,
   ],
 
@@ -14,12 +15,6 @@ module.exports = {
     `npx prettier --write ${filenames.join(' ')}`,
 }
 
-// module.exports = {
-//   // type check typescript files
-//   '**/*.(ts|tsx)': () => 'npm run tsc --noEmit',
-
-//   // lint then format ts and js files
-//   '**/*.(ts|tsx|js)': (filenames) => [
 //     `npm run lint --fix ${filenames.join(' ')}`,
 //     `npx prettier --write ${filenames.join(' ')}`,
 //   ],
