@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
+    "prettier": "npx prettier ",
     "validate": "npm run lint && npm run test && npm run build",
     "watch": "jest --watch",
     "prepare": "husky install",
