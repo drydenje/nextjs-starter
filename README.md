@@ -1,12 +1,29 @@
-"@babel/cli": "^7.22.10",
-    "@babel/core": "^7.22.10",
-    "@babel/preset-env": "^7.22.10",
-    "@testing-library/jest-dom": "^6.0.0",
-    "@testing-library/react": "^14.0.0",
-    "jest": "^29.6.2",
-    "jest-environment-jsdom": "^29.6.2"
+# Next.js Starter Files
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Concept
+
+After finding myself spending too much time setting up projects using tools like Create-React-App and Next.js, I'm hoping that this starter template will speed up time-sensitive code challenges.
+
+## Features
+
+### Static checking
+
+- Typescript
+- ESLint
+- Prettier
+- Husky pre-commit hooks
+- lint-staged: only checks code when necessary
+
+## Installation
+
+```bash
+npm install
+npx husky install
+```
+
+### Development Process
+
+-Initial start from [Paulin Trognon's Blog](https://paulintrognon.fr/blog/typescript-prettier-eslint-next-js)
 
 ## Getting Started
 
