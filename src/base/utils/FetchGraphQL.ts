@@ -24,8 +24,8 @@ Usage:
 
 const FetchGraphQL = async (
   query: string,
-  host = process.env.ENDPOINT,
-  token = process.env.ACCESS_TOKEN
+  host = process.env.ENDPOINT as string,
+  token = process.env.ACCESS_TOKEN as string
 ) => {
   const opts = {
     method: 'POST',

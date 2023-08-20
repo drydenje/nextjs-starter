@@ -1,16 +1,18 @@
-import FetchGraphQL from "./FetchGraphQL";
+import { describe, expect, test } from '@jest/globals'
+// import FetchGraphQL from "./FetchGraphQL";
 
-test("fetches data from a GraphQL server", () => {
-  const query = `query {
-    crewCollection {
-      items {
-        name
-        role
-        bio
+describe('Smoke Tests', () => {
+  test('fetches data from a GraphQL server', () => {
+    const query = `query {
+      crewCollection {
+        items {
+          name
+          role
+          bio
+        }
       }
-    }
-  }`;
+    }`
 
-  const test = 1;
-  expect(test).toEqual(1);
-});
+    expect(query).toEqual(query)
+  })
+})
