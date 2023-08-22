@@ -4,9 +4,9 @@ module.exports = {
   '**/*.(ts|tsx)': () => 'npx tsc --noEmit',
 
   // Lint then format TypeScript and JavaScript files
-  '**/*.(ts|tsx|js)': (filenames) => [
+  '**/*.(ts|tsx|js|jsx)': (filenames) => [
     `npx eslint --fix ${filenames.join(' ')}`,
-    // should probably be using the nextjs linter setup, but it's not working on when you run it on this file
+    // should probably be using the nextjs linter setup(?), but it's not working on when you run it on this file
     // going to look over other setups, might have another option other than lint-staged
     // `npm rum lint --fix ${filenames.join(' ')}`,
     `npx prettier --write ${filenames.join(' ')}`,
