@@ -30,6 +30,12 @@ const createJestConfig = nextJest({ dir: './' })
 const customJestConfig = {
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testEnvironment: 'jest-environment-jsdom',
+
+  // Don't need this, wasn't tripping an error (outdated?)
+  // supposed to help compile *.module.css files
+  // Configure Jest: Support Importing CSS files with moduleNameMapper
+  // need to make this file too
+  // '\\.css$': require.resolve('./test/style-mock.js'),
 }
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async
