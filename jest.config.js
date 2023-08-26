@@ -36,6 +36,9 @@ const customJestConfig = {
   // Configure Jest: Support Importing CSS files with moduleNameMapper
   // need to make this file too
   // '\\.css$': require.resolve('./test/style-mock.js'),
+  setupFilesAfterEnv: [
+    '<rootDir>/node_modules/@testing-library/jest-dom/extend-expect',
+  ],
 }
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async

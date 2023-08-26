@@ -5,7 +5,8 @@ import { Button } from '@/base/components/ui/button'
 export default function Home() {
   return (
     <main>
-      <Button>Click me</Button>
+      <Button>Click me, please</Button>
+      <div>test</div>
     </main>
   )
 }
