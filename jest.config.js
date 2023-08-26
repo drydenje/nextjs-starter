@@ -21,6 +21,7 @@
 // the above code uses import statements, but couldn't get it to work that way. Disabling this specific rule until I can figure it out
 /* eslint-disable */
 const nextJest = require('next/jest')
+
 /* eslint-enable */
 
 // Providing the path to your Next.js app which will enable loading next.config.js and .env files
@@ -36,9 +37,7 @@ const customJestConfig = {
   // Configure Jest: Support Importing CSS files with moduleNameMapper
   // need to make this file too
   // '\\.css$': require.resolve('./test/style-mock.js'),
-  setupFilesAfterEnv: [
-    '<rootDir>/node_modules/@testing-library/jest-dom/extend-expect',
-  ],
+  // setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 }
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async
