@@ -6,7 +6,8 @@ export default function Home() {
   return (
     <main>
       <Button>Click me, please</Button>
-      <div>test</div>
+      <div>test in</div>
+      <div>try without ui library</div>
     </main>
   )
 }
