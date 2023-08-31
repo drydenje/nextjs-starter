@@ -1,9 +1,18 @@
 import React from 'react'
-import { render } from '@testing-library/react'
+// import { render } from '@testing-library/react'
+import { render, createMatchMedia } from 'theme-test-utils'
 import AutoScalingText from './auto-scaling-text'
 
-test.only('renders', () => {
-  render(<AutoScalingText />)
-  // const { debug } = render(<AutoScalingText />)
-  // debug()
+describe('Auto Scaling Test Suite', () => {
+  // using the css-mediaquery polyfill before each test
+  // used for ThemeProvider
+  beforeAll(() => {
+    window.matchMedia = createMatchMedia(window.innerWidth)
+  })
+
+  test('renders', () => {
+    render(<AutoScalingText />)
+    // const { debug } = render(<AutoScalingText />)
+    // debug()
+  })
 })

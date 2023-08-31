@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '@/navigation/NavBar'
-import { render, createMatchMedia } from './theme-test-utils.js'
+import { render, createMatchMedia } from 'theme-test-utils'
 import { screen } from '@testing-library/react'
 
 describe('My Tests', () => {

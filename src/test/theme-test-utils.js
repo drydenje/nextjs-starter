@@ -17,20 +17,21 @@ function createMatchMedia(width) {
   })
 }
 
-function render(ui, options) {
+// 'theme' could also be an object (more likely), such as a theme object, or redux, etc. The default would be imported at the top of the file
+function render(ui, { theme = 'dark', ...options } = {}) {
+  function Wrapper({ children }) {
+    return (
+      <ThemeProvider attribute="class" defaultTheme={theme}>
+        {children}
+      </ThemeProvider>
+    )
+  }
+
+  Wrapper.propTypes = {
+    children: PropTypes.node,
+  }
+
   return rtlRender(ui, { wrapper: Wrapper, ...options })
-}
-
-function Wrapper({ children }) {
-  return (
-    <ThemeProvider attribute="class" defaultTheme="dark">
-      {children}
-    </ThemeProvider>
-  )
-}
-
-Wrapper.propTypes = {
-  children: PropTypes.node,
 }
 
 export * from '@testing-library/react'

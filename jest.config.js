@@ -21,6 +21,7 @@
 // the above code uses import statements, but couldn't get it to work that way. Disabling this specific rule until I can figure it out
 /* eslint-disable */
 const nextJest = require('next/jest')
+const path = require('path')
 
 /* eslint-enable */
 
@@ -31,6 +32,13 @@ const createJestConfig = nextJest({ dir: './' })
 const customJestConfig = {
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
   testEnvironment: 'jest-environment-jsdom',
+
+  // jest will resolve anything in these folders as node modules
+  moduleDirectories: [
+    'node_modules',
+    path.join(__dirname, 'src'),
+    path.join(__dirname, 'src/test'),
+  ],
 
   // Don't need this, wasn't tripping an error (outdated?)
   // supposed to help compile *.module.css files

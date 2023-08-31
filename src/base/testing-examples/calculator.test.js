@@ -15,5 +15,5 @@ test('the clear button switches from AC to C when there is an entry', () => {
   expect(clearButton).toHaveTextContent('C')
 
   fireEvent.click(clearButton)
-  expect(clearButton).toHaveTextContent('BC')
+  expect(clearButton).toHaveTextContent('AC')
 })
