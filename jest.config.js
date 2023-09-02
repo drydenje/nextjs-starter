@@ -46,6 +46,20 @@ const customJestConfig = {
   // need to make this file too
   // '\\.css$': require.resolve('./test/style-mock.js'),
   setupFilesAfterEnv: ['@testing-library/jest-dom/'],
+  // collectCoverageFrom: [
+  //   '**/app/**/*.js|jsx|ts|tsx',
+  //   '**/src/**/*.js|jsx|ts|tsx',
+  //   '!**/.next/**',
+  // ],
+  collectCoverageFrom: [
+    '**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts',
+    '!**/node_modules/**',
+    '!<rootDir>/out/**',
+    '!<rootDir>/.next/**',
+    '!<rootDir>/*.config.*',
+    '!<rootDir>/coverage/**',
+  ],
 }
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async

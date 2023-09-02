@@ -11,7 +11,6 @@ describe('auto-scaling-text', () => {
   })
 
   test('renders ast', () => {
-    debugger
     render(<AutoScalingText />)
     // const { debug } = render(<AutoScalingText />)
     // debug()
