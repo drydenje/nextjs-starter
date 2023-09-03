@@ -30,27 +30,23 @@ const createJestConfig = nextJest({ dir: './' })
 
 // Any custom config you want to pass to Jest
 const customJestConfig = {
+  rootDir: path.join(__dirname, '..'),
+
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  testEnvironment: 'jest-environment-jsdom',
 
   // jest will resolve anything in these folders as node modules
   moduleDirectories: [
     'node_modules',
-    path.join(__dirname, 'src'),
-    path.join(__dirname, 'src/test'),
+    path.join(__dirname, '../src'),
+    path.join(__dirname),
   ],
 
   // Don't need this, wasn't tripping an error (outdated?)
   // supposed to help compile *.module.css files
   // Configure Jest: Support Importing CSS files with moduleNameMapper
   // need to make this file too
-  // '\\.css$': require.resolve('./test/style-mock.js'),
-  setupFilesAfterEnv: ['@testing-library/jest-dom/'],
-  // collectCoverageFrom: [
-  //   '**/app/**/*.js|jsx|ts|tsx',
-  //   '**/src/**/*.js|jsx|ts|tsx',
-  //   '!**/.next/**',
-  // ],
+  // '\\.css$': require.resolve('./style-mock.js'),
+
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
     '!**/*.d.ts',
