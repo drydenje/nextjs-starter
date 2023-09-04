@@ -1,8 +1,34 @@
+// const path = require('path')
+/* eslint-disable */
+const getConfig = require('./jest-common')
+/* eslint-disable */
+// console.log('common:', common)
+
+const a = 0
+
+;(async function () {
+  var common = await getConfig()
+  console.log(common)
+})()
+
+// common().then((config) => {
+//   console.log(config)
+// })
+
 module.exports = {
-  ...require('./jest-common'),
+  // ...require('./jest-common.js'),
+  // ...config,
+  // rootDir: path.join(__dirname, '..'),
   testEnvironment: 'jest-environment-jsdom',
   setupFilesAfterEnv: ['@testing-library/jest-dom/'],
-  testMatch: ['**/app/**/*.test.[tj]s?(x)', '**/src/**/*.test.[tj]s?(x)'],
+  // testMatch: [
+  // '**/*.[jt]s?(x)',
+
+  // '**/app/**/*.[jt]s?(x)',
+  // '**/src/**/*.test.[tj]s?(x)',
+  // '**/src/**/*.*|(\\.|/)(test|spec))\\.jsx?$',
+  // '**/src/**/*.test.[tj]s?(x)',
+  // ],
   coverageThreshold: {
     // setting global thresholds to warn when code coverage starts to regress
     global: {
@@ -20,3 +46,5 @@ module.exports = {
     },
   },
 }
+
+// console.log(module.exports)

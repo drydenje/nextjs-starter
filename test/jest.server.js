@@ -6,5 +6,5 @@ module.exports = {
   ...require('./jest-common'),
   coverageDirectory: path.join(__dirname, '../coverage/server'),
   testEnvironment: 'jest-environment-node',
-  testMatch: ['**/*.server.test.*'],
+  // testMatch: ['**/*.server.test.*'],
 }

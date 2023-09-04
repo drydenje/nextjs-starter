@@ -31,13 +31,15 @@ const createJestConfig = nextJest({ dir: './' })
 // Any custom config you want to pass to Jest
 const customJestConfig = {
   rootDir: path.join(__dirname, '..'),
-
+  roots: ['<rootDir>/src/'],
+  // testPathDirs: ['<rootDir>/src', '<rootDir>/app'],
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
 
   // jest will resolve anything in these folders as node modules
   moduleDirectories: [
     'node_modules',
     path.join(__dirname, '../src'),
+    // path.join(__dirname, '../app'),
     path.join(__dirname),
   ],
 
@@ -48,15 +50,21 @@ const customJestConfig = {
   // '\\.css$': require.resolve('./style-mock.js'),
 
   collectCoverageFrom: [
-    '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
-    '!**/node_modules/**',
-    '!<rootDir>/out/**',
-    '!<rootDir>/.next/**',
-    '!<rootDir>/*.config.*',
-    '!<rootDir>/coverage/**',
+    '**/src/**/*.js',
+    // '**/*.{js,jsx,ts,tsx}',
+    // '!**/*.d.ts',
+    // '!**/node_modules/**',
+    // '!<rootDir>/out/**',
+    // '!<rootDir>/.next/**',
+    // '!<rootDir>/*.config.*',
+    // '!<rootDir>/coverage/**',
   ],
 }
 
+// console.log('RD:', customJestConfig.rootDir)
+// console.log('MD:', customJestConfig.moduleDirectories)
+// console.log('ROOTS:', customJestConfig.roots)
+
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async
 module.exports = createJestConfig(customJestConfig)
+console.log(typeof module.exports)
