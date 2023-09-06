@@ -20,13 +20,13 @@
 
 // the above code uses import statements, but couldn't get it to work that way. Disabling this specific rule until I can figure it out
 /* eslint-disable */
-const nextJest = require('next/jest')
-const path = require('path')
+const nextJest = require('next/jest');
+const path = require('path');
 
 /* eslint-enable */
 
 // Providing the path to your Next.js app which will enable loading next.config.js and .env files
-const createJestConfig = nextJest({ dir: './' })
+const createJestConfig = nextJest({ dir: './' });
 
 // Any custom config you want to pass to Jest
 const customJestConfig = {
@@ -59,12 +59,11 @@ const customJestConfig = {
     // '!<rootDir>/*.config.*',
     // '!<rootDir>/coverage/**',
   ],
-}
+};
 
 // console.log('RD:', customJestConfig.rootDir)
 // console.log('MD:', customJestConfig.moduleDirectories)
 // console.log('ROOTS:', customJestConfig.roots)
 
 // createJestConfig is exported in this way to ensure that next/jest can load the Next.js configuration, which is async
-module.exports = createJestConfig(customJestConfig)
-console.log(typeof module.exports)
+module.exports = createJestConfig(customJestConfig);

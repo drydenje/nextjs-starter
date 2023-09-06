@@ -5,4 +5,6 @@
 test('renders', () => {
   // renderToString(<AutoScalingText />)
   // return true
-})
+});
+
+console.log(window);
