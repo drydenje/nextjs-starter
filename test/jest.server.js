@@ -16,8 +16,6 @@ module.exports = (async function () {
       '**/app/**/*.server.test.[tj]s?(x)',
     ],
   };
-
+  console.log(config);
   return config;
 })();
-
-console.log(module.exports);
