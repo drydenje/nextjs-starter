@@ -11,11 +11,11 @@ module.exports = (async function () {
     testEnvironment: 'jest-environment-node',
     testMatch: [
       '!**/src/**/*.test.[tj]s?(x)',
-      '**/src/**/*.server.test.[tj]s?(x)',
       '!**/app/**/*.test.[tj]s?(x)',
+      '**/src/**/*.server.test.[tj]s?(x)',
       '**/app/**/*.server.test.[tj]s?(x)',
     ],
   };
-  console.log(config);
+  // console.log(config);
   return config;
 })();

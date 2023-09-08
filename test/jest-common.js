@@ -22,11 +22,14 @@
 /* eslint-disable */
 const nextJest = require('next/jest');
 const path = require('path');
+const rootD = path.join(__dirname, '..');
+require('dotenv').config();
 
 /* eslint-enable */
 
 // Providing the path to your Next.js app which will enable loading next.config.js and .env files
-const createJestConfig = nextJest({ dir: './' });
+// const createJestConfig = nextJest({ dir: './' });
+const createJestConfig = nextJest({ dir: rootD });
 
 // Any custom config you want to pass to Jest
 const customJestConfig = {
@@ -34,7 +37,7 @@ const customJestConfig = {
   roots: ['<rootDir>/src/'],
   // testPathDirs: ['<rootDir>/src', '<rootDir>/app'],
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-
+  testEnvironment: 'jest-environment-node',
   // jest will resolve anything in these folders as node modules
   moduleDirectories: [
     'node_modules',
@@ -50,7 +53,8 @@ const customJestConfig = {
   // '\\.css$': require.resolve('./style-mock.js'),
 
   collectCoverageFrom: [
-    '**/src/**/*.js',
+    '**/src/**/*.{js,jsx,ts,tsx}',
+    '**/app/**/*.{js,jsx,ts,tsx}',
     // '**/*.{js,jsx,ts,tsx}',
     // '!**/*.d.ts',
     // '!**/node_modules/**',
