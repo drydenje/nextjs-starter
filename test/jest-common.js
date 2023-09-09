@@ -37,7 +37,7 @@ const customJestConfig = {
   roots: ['<rootDir>/src/'],
   // testPathDirs: ['<rootDir>/src', '<rootDir>/app'],
   // setupFilesAfterEnv: ["<rootDir>/jest.setup.js"],
-  testEnvironment: 'jest-environment-node',
+  // testEnvironment: 'jest-environment-node',
   // jest will resolve anything in these folders as node modules
   moduleDirectories: [
     'node_modules',
@@ -52,17 +52,17 @@ const customJestConfig = {
   // need to make this file too
   // '\\.css$': require.resolve('./style-mock.js'),
 
-  collectCoverageFrom: [
-    '**/src/**/*.{js,jsx,ts,tsx}',
-    '**/app/**/*.{js,jsx,ts,tsx}',
-    // '**/*.{js,jsx,ts,tsx}',
-    // '!**/*.d.ts',
-    // '!**/node_modules/**',
-    // '!<rootDir>/out/**',
-    // '!<rootDir>/.next/**',
-    // '!<rootDir>/*.config.*',
-    // '!<rootDir>/coverage/**',
-  ],
+  // collectCoverageFrom: [
+  //   '**/src/**/*.{js,jsx,ts,tsx}',
+  //   '**/app/**/*.{js,jsx,ts,tsx}',
+  //   // '**/*.{js,jsx,ts,tsx}',
+  //   // '!**/*.d.ts',
+  //   // '!**/node_modules/**',
+  //   // '!<rootDir>/out/**',
+  //   // '!<rootDir>/.next/**',
+  //   // '!<rootDir>/*.config.*',
+  //   // '!<rootDir>/coverage/**',
+  // ],
 };
 
 // console.log('RD:', customJestConfig.rootDir)

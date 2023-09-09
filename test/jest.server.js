@@ -7,6 +7,7 @@ module.exports = (async function () {
   const common = await getConfig();
   const config = {
     ...common,
+    displayName: 'server',
     coverageDirectory: path.join(__dirname, '../coverage/server'),
     testEnvironment: 'jest-environment-node',
     testMatch: [
