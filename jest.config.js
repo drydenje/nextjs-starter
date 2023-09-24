@@ -1,12 +1,10 @@
-/* eslint-disable */
 const getCommon = require('./test/jest-common');
-/* eslint-enable */
 
 module.exports = (async function () {
   const common = await getCommon();
   const config = {
     ...common,
-    testEnvironment: 'jest-environment-jsdom',
+    // testEnvironment: 'jest-environment-jsdom',
     collectCoverageFrom: [
       '**/src/**/*.{js,jsx,ts,tsx}',
       '**/app/**/*.{js,jsx,ts,tsx}',
