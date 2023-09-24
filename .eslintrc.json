@@ -9,6 +9,7 @@
     "@typescript-eslint/no-unused-vars": "warn",
     "@typescript-eslint/no-explicit-any": "error",
     "prefer-const": "error",
-    "strict": ["error", "never"]
+    "strict": ["error", "never"],
+    "@typescript-eslint/no-var-requires": "off"
   }
 }
