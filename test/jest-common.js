@@ -45,7 +45,11 @@ const customJestConfig = {
     // path.join(__dirname, '../app'),
     path.join(__dirname),
   ],
-  watchPlugins: ['jest-watch-select-projects'],
+  watchPlugins: [
+    'jest-watch-select-projects',
+    'jest-watch-typeahead/filename',
+    'jest-watch-typeahead/testname',
+  ],
 
   // Don't need this, wasn't tripping an error (outdated?)
   // supposed to help compile *.module.css files
