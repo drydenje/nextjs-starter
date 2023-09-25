@@ -1,7 +1,5 @@
-/* eslint-disable */
 const path = require('path');
 const getConfig = require('./jest-common');
-/* eslint-enable */
 
 module.exports = (async function () {
   const common = await getConfig();

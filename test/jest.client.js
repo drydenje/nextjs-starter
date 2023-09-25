@@ -1,6 +1,4 @@
-/* eslint-disable */
 const getConfig = require('./jest-common');
-/* eslint-enable */
 
 module.exports = (async function () {
   const common = await getConfig();
@@ -19,22 +17,6 @@ module.exports = (async function () {
       // '**/src/**/*.*|(\\.|/)(test|spec))\\.jsx?$',
       // '**/src/**/*.test.[tj]s?(x)',
     ],
-    // coverageThreshold: {
-    //   // setting global thresholds to warn when code coverage starts to regress
-    //   global: {
-    //     statements: 42,
-    //     branches: 23,
-    //     lines: 41,
-    //     functions: 38,
-    //   },
-    //   // we can set thresholds on individual files
-    //   './src/navigation/index.ts': {
-    //     statements: 0,
-    //     branches: 80,
-    //     functions: 100,
-    //     lines: 0,
-    //   },
-    // },
   };
 
   return config;
