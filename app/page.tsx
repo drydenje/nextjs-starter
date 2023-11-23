@@ -5,9 +5,9 @@ import { Button } from '@/base/components/ui/button';
 export default function Home() {
   return (
     <>
-      <Button>Click me, please</Button>
+      {/* <Button>Click me, please</Button>
       <div>test in</div>
-      <div>try without ui library</div>
+      <div>try without ui library</div> */}
     </>
   );
 }
