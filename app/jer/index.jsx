@@ -1,3 +1,5 @@
+'use client';
+import React from 'react';
 // import { Button } from "@/components/ui";
 import { Button } from '@/base/components/ui/button';
 // import FetchGraphQL from "@/src/components/"
