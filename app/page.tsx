@@ -7,7 +7,7 @@ export default function Home() {
     <>
       <Button>Click me, please</Button>
       <div>test in</div>
-      <div>try without ui library</div>
+      <div>app/jer</div>
     </>
   );
 }
