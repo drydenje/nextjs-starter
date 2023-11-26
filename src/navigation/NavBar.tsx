@@ -38,8 +38,15 @@ const todo: { title: string; href: string; description: string }[] = [
 
 const NavBar = () => {
   return (
-    <NavigationMenu>
+    <NavigationMenu className="justify-end">
       <NavigationMenuList>
+        <NavigationMenuItem>
+          <Link href="/" legacyBehavior passHref>
+            <NavigationMenuLink>
+              Home
+            </NavigationMenuLink>
+          </Link>
+        </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuTrigger>Getting Started</NavigationMenuTrigger>
           <NavigationMenuContent>
@@ -49,8 +56,6 @@ const NavBar = () => {
                   {item.description}
                 </ListItem>
               ))}
-
-              {/* <NavigationMenuLink asChild>Link</NavigationMenuLink> */}
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
